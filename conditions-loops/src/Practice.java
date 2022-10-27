@@ -2,17 +2,41 @@ import java.util.Scanner;
 
 public class Practice {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int n = input.nextInt();
-        int p = 0;
-        int i = 1;
-        int count = 2;
-        while (count <= n) {
-            int temp = i;
-            i = i + p;
-            p = temp;
-            count++;
+        Scanner in = new Scanner(System.in);
+        int ans = 0;
+        while (true) {
+            System.out.print("Enter your operator: ");
+            char op = in.next().trim().charAt(0);
+
+            if (op == '+' || op == '-' || op == '*' || op == '/' || op == '%') {
+                System.out.println("Enter two numbers: ");
+                int num1 = in.nextInt();
+                int num2 = in.nextInt();
+
+                if (op == '+') {
+                    ans = num1 + num2;
+                }
+                if (op == '-') {
+                    ans = num1 - num2;
+                }
+                if (op == '*') {
+                    ans = num1 * num2;
+                }
+                if (op == '/') {
+                    if (num2 != 0) {
+                        ans = num1 / num2;
+                    }
+                }
+                if (op == '%') {
+                    ans = num1 / num2;
+                }
+            } else if (op == 'X' || op == 'x') {
+                System.out.println("Calculator stopped.");
+                break;
+            } else {
+                System.out.println("Invalid Operator");
+            }
+            System.out.println("The answer is: " + ans);
         }
-        System.out.println(i);
     }
 }
