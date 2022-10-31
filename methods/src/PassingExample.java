@@ -1,6 +1,6 @@
 public class PassingExample {
     public static void main(String[] args) {
-        String name = "Ishita Bhandari";
+        String name = "Vinal Pawar";
         greet(name);
     }
 
