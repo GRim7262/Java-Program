@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Practice {
+public class GreetName {
     public static void main(String[] args) {
         System.out.print("Enter your name: ");
         Scanner input = new Scanner(System.in);
@@ -8,3 +8,4 @@ public class Practice {
         System.out.print("Hello " + name);
     }
 }
+
